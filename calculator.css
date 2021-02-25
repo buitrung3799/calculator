@@ -87,8 +87,12 @@ button:hover{
 .key-operator {
     background-color: #eee;
 }
+.clear-button {
+    grid-column: 1 / span 2;
+    grid-row: 6;
+}
 .key-equal {
     background-image: linear-gradient(to bottom, #fe886a , #ff7033);
     grid-column: -2;
-    grid-row: 2 / span 4; 
+    grid-row: 2 / span 5; 
 }
