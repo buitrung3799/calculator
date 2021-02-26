@@ -217,7 +217,7 @@ const calculator_buttons = [   //Create list of buttons
         name: 'comma',
         symbol: '.',
         formula: '.',
-        type: 'decimal',
+        type: 'number',
     },
     {
         name : 'delete',
