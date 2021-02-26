@@ -316,9 +316,17 @@ const calculator_buttons = [   //Create list of buttons
             updateResult(result_final); //update output
             return;
         }
+        if(data.operation.join('').match(/^0\d+/)){ //Remove leading zeros
+         data.operation.splice(-2,1);
+        } else if (data.operation.join('').match(/[^0-9\.]0\d+/)) {
+            data.operation.splice(-2,1);
+        } else if (data.operation.join('').match(/\.0/)){
+            data.operation.join('');
+        }
         updateOutputOperation(data.operation.join(''));
     }
     const updateOutputOperation = operation => {
+        console.log(operation);
         display.innerHTML = operation;
     }
     const updateResult = finalresult => {
